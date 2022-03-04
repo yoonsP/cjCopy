@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+<style>
+    #nav {position: fixed; width: 100%; height: 90px; z-index: 999;}
+    #nav .innerWrap {overflow: hidden; width: 1100px; height: 100%; margin: 0 auto; position: relative;}
+    #nav .innerWrap .logoWrap {float: left; width: 60px; height: 52px; margin: 19px 0;}
+    #nav .innerWrap .logoWrap a {}
+    #nav .innerWrap .logoWrap a .logo {width: 100%; height: 100%; background: url(./images/cj_logo2.svg)no-repeat center; background-size: 100% auto;}
+    
+    #nav .innerWrap .menuWrap {float: left; overflow: hidden; width: calc(1100 - 199); padding: 34px 0;}
+    #nav .innerWrap .menuWrap > li {float: left; font-size: 18px; margin: 0 0 0 72px;}
+    #nav .innerWrap .menuWrap > li a {color: #fff; line-height: 22px;}
+    #nav .innerWrap .menuWrap > li.slice {width: 1px; height: 22px; border-right: 1px solid #d8d8d8; opacity: .4;}
+
+    #nav .innerWrap .utilWrap {position: absolute;top: 32px;right: -30px; overflow: hidden; width: 139px; color: #fff; padding: 4px 0;}
+    #nav .innerWrap .utilWrap .langWrap {overflow: hidden; margin: 0 0 0 5px;}
+    #nav .innerWrap .utilWrap .langWrap .lang {float: left;}
+    #nav .innerWrap .utilWrap .langWrap .arrow {float: right; width: 16px; height: 16px; background: url(./images/icon_lang_arrow_white@2x.png)no-repeat center bottom; margin: 5px 0 0 5px;}
+    #nav .innerWrap .search {position: absolute;top: 29px;right: 0; width: 32px; height: 32px; background: url(./images/searchIcon.png)no-repeat; background-size: 100%;}
+
+    .container {}
+    .container .sec {}
+    .container .main {position: relative; overflow: hidden; width: 100%; height: 679px;}
+    .container .main .video {position: absolute;top: -84px;left: 0; width: 100%; z-index: 998;}
+    .container .main .timerWrap {position: absolute;bottom: 58px;right: 58px; width: 64px; height: 64px; background-color: #fdfdfd; border-radius: 80px; z-index: 999;}
+    .container .main .timerWrap .timer {width: 25px; height: 50px; background: url(./images/ico_pause_play.png)no-repeat center; background-position: 0 5px;}
+    /* video */
+    /* 전체화면 버튼 */ 
+    video::-webkit-media-controls-fullscreen-button { display: none !important;} 
+    /* 일시정지, 재생 버튼 */ 
+    video::-webkit-media-controls-play-button { } 
+    /* 재생 슬라이드..? */ 
+    video::-webkit-media-controls-timeline { display: none !important;} 
+    /* 현재 진행 시간 */ 
+    video::-webkit-media-controls-current-time-display{ display: none !important;} 
+    /* 전체 시간 */ 
+    video::-webkit-media-controls-time-remaining-display { display: none !important;} 
+    /* 음소거 버튼 */ 
+    video::-webkit-media-controls-mute-button { display: none !important;} 
+    /* 볼륨 조절 슬라이드 */ 
+    video::-webkit-media-controls-volume-slider { display: none !important;}
+
+    video::-webkit-media-controls-fullscreen-button { display: none !important; }
+    
+    
+</style>
+<body>
+    
+    <div id="nav">
+        <div class="innerWrap">
+            <div class="logoWrap">
+                <a href="./index.html">
+                    <div class="logo"></div>
+                </a>
+            </div>
+            <ul class="menuWrap">
+                <li><a href="">#LIVE NEW CJ</a></li>
+                <li><a href="">CJ Now</a></li>
+                <li><a href="">Brand</a></li>
+                <li><a href="">CSV</a></li>
+                <li><a href="" class="slice">CJ소개</a></li>
+                <li><a href="">인재채용</a></li>
+            </ul>
+            <div class="utilWrap">
+                <div class="langWrap">
+                    <a class="lang">KOR
+                        <div class="arrow"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="search"></div>
+        </div>
+
+    </div>
+    <!-- nav end -->
+
+    <div class="container">
+        <div class="sec main">
+            <video class="video" muted preload="auto" autoplay loop>
+                <source src="./video/mainVideo.mp4" type="">
+            </video>
+            <div class="timer">
+                <div class="outer"></div>
+                <div class="inner">
+                    <div class="play"></div>
+                    <div class="stop"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container end -->
+
+    <div id="footer">
+        푸터
+    </div>
+    <!-- footer end -->
+</body>
+</html>
