@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/reset.css">
 </head>
 <style>
+    /* nav */
     #nav {position: fixed; width: 100%; height: 90px; z-index: 999;}
     #nav .innerWrap {overflow: hidden; width: 1100px; height: 100%; margin: 0 auto; position: relative;}
     #nav .innerWrap .logoWrap {float: left; width: 60px; height: 52px; margin: 19px 0;}
@@ -26,31 +27,54 @@
     #nav .innerWrap .utilWrap .langWrap .arrow {float: right; width: 16px; height: 16px; background: url(./images/icon_lang_arrow_white@2x.png)no-repeat center bottom; margin: 5px 0 0 5px;}
     #nav .innerWrap .search {position: absolute;top: 29px;right: 0; width: 32px; height: 32px; background: url(./images/searchIcon.png)no-repeat; background-size: 100%;}
 
+
+    /* sec basic */
+
+    .sec .inner {max-width: 1100px; margin: 0 auto;}
+
+    /* video */
+    /* 전체화면 버튼 */ 
+    video::-webkit-media-controls-fullscreen-button {display: none !important;} 
+    /* 일시정지, 재생 버튼 */ 
+    video::-webkit-media-controls-play-button { } 
+    /* 재생 슬라이드..? */ 
+    video::-webkit-media-controls-timeline {display: none !important;} 
+    /* 현재 진행 시간 */ 
+    video::-webkit-media-controls-current-time-display{display: none !important;} 
+    /* 전체 시간 */ 
+    video::-webkit-media-controls-time-remaining-display {display: none !important;} 
+    /* 음소거 버튼 */ 
+    video::-webkit-media-controls-mute-button {display: none !important;} 
+    /* 볼륨 조절 슬라이드 */ 
+    video::-webkit-media-controls-volume-slider {display: none !important;}
+
+    /* image */
+
+
+    /* sec  */
     .container {}
-    .container .sec {}
     .container .main {position: relative; overflow: hidden; width: 100%; height: 679px;}
     .container .main .video {position: absolute;top: -84px;left: 0; width: 100%; z-index: 998;}
     .container .main .timerWrap {position: absolute;bottom: 58px;right: 58px; width: 64px; height: 64px; background-color: #fdfdfd; border-radius: 80px; z-index: 999;}
     .container .main .timerWrap .timer {width: 25px; height: 50px; background: url(./images/ico_pause_play.png)no-repeat center; background-position: 0 5px;}
-    /* video */
-    /* 전체화면 버튼 */ 
-    video::-webkit-media-controls-fullscreen-button { display: none !important;} 
-    /* 일시정지, 재생 버튼 */ 
-    video::-webkit-media-controls-play-button { } 
-    /* 재생 슬라이드..? */ 
-    video::-webkit-media-controls-timeline { display: none !important;} 
-    /* 현재 진행 시간 */ 
-    video::-webkit-media-controls-current-time-display{ display: none !important;} 
-    /* 전체 시간 */ 
-    video::-webkit-media-controls-time-remaining-display { display: none !important;} 
-    /* 음소거 버튼 */ 
-    video::-webkit-media-controls-mute-button { display: none !important;} 
-    /* 볼륨 조절 슬라이드 */ 
-    video::-webkit-media-controls-volume-slider { display: none !important;}
+    
+    .liveNewCj {}
+    .liveNewCj .inner .upper {padding: 0 0 20px;}
+    .liveNewCj .inner .upper > p.tit {font-size: 40px; margin: 20px 0;}
+    .liveNewCj .inner .upper .sub {overflow: hidden;}
+    .liveNewCj .inner .upper .sub > li {float: left;}
+    .liveNewCj .inner .upper .sub > li:nth-child(2) {float: right;}
+    .liveNewCj .inner .upper .sub > li > p {font-size: 20px;}
+    .liveNewCj .inner .upper .sub > li > a {font-size: 16pxc;}
+    .liveNewCj .inner .down {overflow: hidden; padding: 27px 0 0;}
+    .liveNewCj .inner .down > li {float: left;}
+    .liveNewCj .inner .down > li.left {width: 40%;}
+    .liveNewCj .inner .down > .left .contentsWrap {position: relative; width: 393px; height: 524px;}
+    .liveNewCj .inner .down > .left .contentsWrap .video {border-top-left-radius: 30px; border-bottom-right-radius: 30px;}
+    .liveNewCj .inner .down > .left .contentsWrap .img {position: absolute;bottom: 0;right: 0; width: 180px; height: 240px; background: url(./images/livecj.png)no-repeat center; background-size: contain;}
+    .liveNewCj .inner .down > .right .titleWrap {font-size: 40px; font-weight: 500;}
+    .liveNewCj .inner .down > .right .subWrap {font-size: 22px; font-weight: 300; padding: 22px 0 37px;}
 
-    video::-webkit-media-controls-fullscreen-button { display: none !important; }
-    
-    
 </style>
 <body>
     
@@ -93,6 +117,41 @@
                     <div class="play"></div>
                     <div class="stop"></div>
                 </div>
+            </div>
+        </div>
+        <div class="sec liveNewCj">
+            <div class="inner">
+                <div class="upper">
+                    <p class="tit">#LIVE NEW CJ</p>
+                    <ul class="sub">
+                        <li>
+                            <p>당신의 평범한 일상을 새롭게</p>
+                        </li>
+                        <li>
+                            <a href="">전체보기 ></a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="down">
+                    <li class="left">
+                        <div class="contentsWrap">
+                            <video src="/video/liveCj.mp4" muted preload="auto" autoplay loop class="video"></video>
+                            <div class="img liveCj"></div>
+                        </div>
+                    </li>
+                    <li class="right">
+                        <div class="titleWrap">
+                            <p class="">[FUTREVERSE]</p>
+                            <p class="">메타버스 갓생 준비 완</p>
+                            <p class="">메.잘.알이 푸는 특별한 썰!</p>
+                        </div>
+                        <div class="subWrap">
+                            <p class="">매일이 새로운 모험 으로 가득찬</p>
+                            <p class="">CJ와 함께하는 FUTUREVERSE로 놀러가자</p>
+                        </div>
+                        <button>자세히보기</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
